@@ -193,4 +193,5 @@ void Des::print(void)
     displayBitTable(revers, 64);
     cout << endl;
     displayAsHex(revers, 64);
+    cout << endl;
 }
