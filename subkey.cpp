@@ -16,7 +16,13 @@ Subkey::Subkey(char key[])
 // Destructor
 Subkey::~Subkey()
 {
+    delete key;
+    delete L;
+    delete R;
 
+    for (int i = 0; i < 16; i++)
+        delete subkeys[i];
+    delete subkeys;
 }
 
 void Subkey::displayTrace(bool value)

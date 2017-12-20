@@ -63,7 +63,7 @@ int main()
 
     // Operate the DES algorithm
     Des *des = new Des(message, key);
-    des->displayTrace(false); // Display execution trace : set true
+    des->displayTrace(true); // Display execution trace : set true
     des->encryption();;
     des->print();
     delete des;
