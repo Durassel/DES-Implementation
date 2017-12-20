@@ -67,7 +67,7 @@ void Des::encryption(void)
 {
     // Subkeys generation
     Subkey *sk = new Subkey(key);
-    sk->displayTrace(true);
+    sk->displayTrace(false);
     subkeys = sk->generateSubkeys();
 
     if (trace) {
