@@ -26,7 +26,6 @@ class Des
         virtual ~Des();
         void displayTrace(bool);
         char* split(char *, long, long, long);
-        char* permute(char *, char *, long);
         void encryption(void);
         void print(void);
 };

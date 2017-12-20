@@ -63,21 +63,11 @@ char* Des::split(char *table, long tabsize, long start, long endT)
     return result;
 }
 
-char* Des::permute(char *table, char *perm_table, long tabsize)
-{
-    char *result = new char[tabsize];
-
-    for (int i = 0; i < tabsize; i++)
-        result[i] = table[(int) perm_table[i] - 1];
-
-    return result;
-}
-
 void Des::encryption(void)
 {
     // Subkeys generation
     Subkey *sk = new Subkey(key);
-    sk->displayTrace(false);
+    sk->displayTrace(true);
     subkeys = sk->generateSubkeys();
 
     if (trace) {

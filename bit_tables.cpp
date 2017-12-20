@@ -6,38 +6,50 @@ char *convertHexToBin(char character)
 {
     switch(character) {
         case '0':
-            return "0000";
+            return (char *) "0000";
         case '1':
-            return "0001";
+            return (char *) "0001";
         case '2':
-            return "0010";
+            return (char *) "0010";
         case '3':
-            return "0011";
+            return (char *) "0011";
         case '4':
-            return "0100";
+            return (char *) "0100";
         case '5':
-            return "0101";
+            return (char *) "0101";
         case '6':
-            return "0110";
+            return (char *) "0110";
         case '7':
-            return "0111";
+            return (char *) "0111";
         case '8':
-            return "1000";
+            return (char *) "1000";
         case '9':
-            return "1001";
+            return (char *) "1001";
         case 'A':
-            return "1010";
+            return (char *) "1010";
         case 'B':
-            return "1011";
+            return (char *) "1011";
         case 'C':
-            return "1100";
+            return (char *) "1100";
         case 'D':
-            return "1101";
+            return (char *) "1101";
         case 'E':
-            return "1110";
+            return (char *) "1110";
         case 'F':
-            return "1111";
+            return (char *) "1111";
+        default:
+            return (char *) "";
     }
+}
+
+char* permute(char *table, char *perm_table, long tabsize)
+{
+    char *result = new char[tabsize];
+
+    for (int i = 0; i < tabsize; i++)
+        result[i] = table[(int) perm_table[i] - 1];
+
+    return result;
 }
 
 void displayBitTable(char *table, long tabsize)

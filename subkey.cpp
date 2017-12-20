@@ -1,6 +1,5 @@
 #include <cstring>
 #include <iostream>
-#include "permutations.h"
 #include "bit_tables.h"
 #include "pc.h"
 #include "subkey.h"
